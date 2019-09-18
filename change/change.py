@@ -1,5 +1,5 @@
 #Define minimum number of coins 
-#No mather how the coin array is arranged
+#No matter how the coin array is arranged
 def find_fewest_coins(coins, target):
     
     #Create variable to storage results 
