@@ -1,4 +1,5 @@
 def leap_year(year):
+
     print(year)
     temp1 = (year % 4)
     temp2 = temp1 + (year % 100) 
@@ -16,4 +17,3 @@ leap_year(1900)
 leap_year(1901)
 leap_year(2000)
 leap_year(2001)
-
