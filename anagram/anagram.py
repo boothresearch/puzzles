@@ -1,2 +1,6 @@
 def find_anagrams(word, candidates):
-    pass
+    print(sorted(word))
+    print(sorted(candidates))
+
+
+find_anagrams("hello", "lleho")
