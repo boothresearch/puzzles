@@ -12,7 +12,7 @@ def find_anagrams(word, candidates):
     
     word_letters = sorted(word_letters)
     
-    for i in candidates:
+    for i in list(candidates):
         
         i_letters= []
         
