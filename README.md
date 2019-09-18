@@ -42,13 +42,13 @@ Your job, as a team, is to solve as many as possible.
  1. Then all of you should clone (i.e. download) from that person's fork to your own machines (in these examples, the command prompt is shown as `$`; yours might look different):
 
     ```
-    $ git clone http://github.com/[WHOEVER FORKED'S USERNAME]/puzzles
+    $ git clone git@github.com:[WHOEVER FORKED'S USERNAME]/puzzles.git
     ```
 
     If I was on your team, the command would look like:
 
     ```
-    $ git clone http://github.com/raghubetina/puzzles
+    $ git clone git@github.com:raghubetina/puzzles.git
     ```
 
  1. Next, `cd` (**c**hange **d**irectory) into the folder you just downloaded:
@@ -205,7 +205,7 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
     git checkout [SHA of commit you want to go back to]
     ```
 
-    (Find the SHA by looking at the output if `git log`.)
+    Find the SHA by looking at the output if `git log`. Just the first 7 or so digits of the SHA are enough; you don't need the whole thing.
 
     If you jump to a commit like this, you'll be in a "detached" state — i.e., not on any branch. This is okay for browsing, but it's best not to make any changes.
 
@@ -215,6 +215,12 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
 
     ```
     git push
+    ```
+
+    The very first time you `push` to a branch, it may ask you to do something like:
+
+    ```
+    git push --set-upstream origin your-branch-name
     ```
 
  1. To retrieve the freshest version from GitHub.com, in case there have been any updates:
