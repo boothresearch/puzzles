@@ -1,5 +1,5 @@
-x = int(input('Please enter the x coordinate:'))
-y = int(input('Please enter the y coordinate:'))
+#x = int(input('Please enter the x coordinate:'))
+#y = int(input('Please enter the y coordinate:'))
 def score(x, y):
     if x**2+y**2>100:
         return 0 
@@ -11,4 +11,4 @@ def score(x, y):
         return 10 
     else:
         print("Error")
-print("The score is: ", score(x,y))
+#print("The score is: ", score(x,y))
