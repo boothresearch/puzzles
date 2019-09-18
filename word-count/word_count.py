@@ -2,19 +2,20 @@ import re
 
 def count_words(sentence):
     ## Set possible regex patterns
-    number_ptrn = r'(\d+)(\W)*(\s|\t|\n)'
-    word_ptrn = r'([a-zA-Z]+(\'+[a-zA-Z]+)?)(\W)*(\s|\t|\n)'
-    ptrn_list = [number_ptrn,word_ptrn]
+    #number_ptrn = r'(\d+)(\W)*((\s|\t|\n)|$)'
+    word_ptrn = r'([\w]+(\'+[\w]+)?)(\W)*((\s|\t|\n)|$)'
+    ptrn_list = [word_ptrn]
     
     # Get a list of all words, numbers and contractions
     # separated by some type of white space
     
     word_list = list()
+    matches = dict()
     for ptrn in ptrn_list:
     
-        matches = re.findall(ptrn,sentence.lower(),re.I)
+        matches[ptrn] = re.findall(ptrn,sentence.lower())
     
-        for match in matches:
+        for match in matches[ptrn]:
             word_list.append(match[0])
 
             
