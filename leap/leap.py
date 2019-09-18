@@ -1,2 +1,4 @@
 def leap_year(year):
-    pass
+    if(year%%400) {
+        return("Not leap year")
+    } else if 
