@@ -120,7 +120,13 @@ Your job, as a team, is to solve as many as possible.
     git checkout master
     ```
 
-    and then start a new version for your new task:
+    Get the freshest version, in case there have been any updates:
+
+    ```
+    git pull
+    ```
+
+    And then start a new version for your new task:
 
     ```
     git checkout -b whatever-my-next-task-is
@@ -210,7 +216,8 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
     ```
     git push
     ```
- 1. To retrieve the freshest version from GitHub.com:
+
+ 1. To retrieve the freshest version from GitHub.com, in case there have been any updates:
 
     ```
     git pull
@@ -226,6 +233,6 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
 
  1. **Never** make commits directly to the `master` branch. Always work on your own, experimental branch. We'll talk about why this is soon.
 
-I know this is a lot, but our main focus today is getting familiar with git. Please wave over an instructor as you experiment with these commands and ask questions; remember:
+I know this is a lot, but our main focus today is just getting our feet wet with git. Please wave over an instructor as you experiment with these commands and ask questions; remember:
 
 > Questions are places in your mind where answers fit. If you haven’t asked the question, the answer has nowhere to go. — Clay Christensen
