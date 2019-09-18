@@ -1,6 +1,6 @@
 def steps(number):
     if number <= 0:
-        return ValueError
+        raise ValueError('Input must be strictly positive!')
     steps = 0
     while number != 1:
         if number % 2 == 0:
