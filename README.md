@@ -163,6 +163,26 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
     
     I usually just think of `git add -A; git stash` as a convenient way to discard all the changes since my most recent commit, so that I can start afresh; but, there _is_ a way to get those changes back if I want them (this only happens about once a year).
  
+ 1. To see the history of your current branch:
+
+    ```
+    git log
+    ```
+
+    You will see the author, date, and title of each commit preceded by a long sequence of letters and numbers known as the "SHA-1 hash" of the commit. This is a unique fingerprint of the snapshot.
+
+ 1. (Advanced) To jump back to a prior commit:
+
+    ```
+    git checkout [SHA of commit you want to go back to]
+    ```
+
+    (Find the SHA by looking at the output if `git log`.)
+
+    If you jump to a commit like this, you'll be in a "detached" state — i.e., not on any branch. This is okay for browsing, but it's best not to make any changes.
+
+    If you want to start a new branch from this point, though, that's perfectly fine — I do that all the time when I decide I want to try a new approach. Just `git checkout -b new-branch-name` as usual.
+
  1. When you're ready to send your work back to GitHub.com from your local machine:
 
     ```
