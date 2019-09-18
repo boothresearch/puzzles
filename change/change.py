@@ -3,7 +3,7 @@
 def find_fewest_coins(coins, target):
     
     #Create variable to storage results 
-    output = [None]*len(coins)
+    output = [0]*len(coins)
     
     #Define change left
     changeLeft = target
