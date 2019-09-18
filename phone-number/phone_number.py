@@ -7,5 +7,5 @@ def Phone(phone):
     #Keep last 11 numbers
     phone = phone[len(phone)-10:len(phone)]
     #Print
-    print(phone)
+    return phone
 
