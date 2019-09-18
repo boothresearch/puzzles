@@ -3,7 +3,7 @@ import re
 def count_words(sentence):
     ## Set possible regex patterns
     #number_ptrn = r'(\d+)(\W)*((\s|\t|\n)|$)'
-    word_ptrn = r'([\w]+(\'+[\w]+)?)(\W)*((\s|\t|\n)|$)'
+    word_ptrn = r'([a-zA-Z0-9]+(\'+[a-zA-Z0-9]+)?)((\s|\t|\n|\W|_)|$)'
     ptrn_list = [word_ptrn]
     
     # Get a list of all words, numbers and contractions
