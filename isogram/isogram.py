@@ -29,5 +29,3 @@ def is_isogram(string):
             letter_list.append(letter) 
   
     return True
-
-is_isogram()    
