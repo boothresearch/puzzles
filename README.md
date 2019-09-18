@@ -37,7 +37,9 @@ Your job, as a team, is to solve as many as possible.
 ## Setup
  
  1. One person from your team should fork (i.e. copy) from `boothresearch/puzzles` to their own account.
- 1. Then all of you should clone (i.e. download) that person's fork to your own machines (in these examples, the command prompt is shown as `$`; yours might look different):
+ 1. That person should then go to the **Settings** tab at the top of _their fork_, find the **Collaborators** tab on the left side, and then add the other teammates by username.
+ 1. Everyone else should receive an invitation via email; accept it.
+ 1. Then all of you should clone (i.e. download) from that person's fork to your own machines (in these examples, the command prompt is shown as `$`; yours might look different):
 
     ```
     $ git clone http://github.com/[WHOEVER FORKED'S USERNAME]/puzzles
@@ -105,6 +107,26 @@ Your job, as a team, is to solve as many as possible.
     Note that the `-i` flag must come _before_ the filename.
 
  1. `cd ..` to navigate back up to the parent folder when you're ready to work on a different puzzle, and then `cd` into that one. Rinse and repeat.
+ 1. Each of you should choose a task to work on. Divide and conquer as you see fit. Before each task, first take a snapshot of the work that you did so far:
+
+    ```
+    git commit -A
+    git commit -m "A description of what you did"
+    ```
+
+    and then switch back to the original version:
+
+    ```
+    git checkout master
+    ```
+
+    and then start a new version for your new task:
+
+    ```
+    git checkout -b whatever-my-next-task-is
+    ```
+
+    More on this below.
 
 ## Python references
 
@@ -203,3 +225,7 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
     ```
 
  1. **Never** make commits directly to the `master` branch. Always work on your own, experimental branch. We'll talk about why this is soon.
+
+I know this is a lot, but our main focus today is getting familiar with git. Please wave over an instructor as you experiment with these commands and ask questions; remember:
+
+> Questions are places in your mind where answers fit. If you haven’t asked the question, the answer has nowhere to go. — Clay Christensen
