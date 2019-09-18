@@ -1,7 +1,7 @@
 def is_isogram(string):
     
     try:
-        original_string = string
+        original_string = string # Saving the original string 
         
         # The idea is to count the occurrences of each letter in the string
         # If one of the occurrences is greater than 1, the word is NOT an isogram
@@ -17,15 +17,13 @@ def is_isogram(string):
             string = string.replace(first_character, "")
     
         if last_value == 1:
-            return "The string " + original_string + " is an isogram!" 
+            return "The string \" " + original_string + " \" is an isogram!" 
         
         else:
-            return "The string \" " + original_string + " \" is NOT an isogram!\n\n The letter " + first_character + " appears " + last_value + " times"
+            return "The string \"" + original_string + "\" is NOT an isogram because the letter \"" + first_character + "\" appears " + str(last_value) + " times!"
             
     
-    except TypeError:
+    except:
         print("The input should be a String!!!")
-        
-    #still need to catch string errors
-    #except NameError:
-    #    print(" The input should be a String!!!\n\n Please, insert your input between quotes, e.g. \" string \" ")
+        print("\n Please, insert your input between quotes, e.g. \" string \" ")
+    
