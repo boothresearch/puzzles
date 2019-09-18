@@ -3,7 +3,10 @@ def rotate(text, key):
     for c in text:
         if c == ' ':
             shifted_text += c
-        else:
+        elif 97<=ord(c):
             shifted_text += chr(97 + ((ord(c)-97 + key)%26))
+        else: 
+            shifted_text += chr(65 + ((ord(c)-65 + key)%26))
+            
     return shifted_text
 
