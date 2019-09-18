@@ -4,4 +4,6 @@ def is_isogram(word):
         return word, len(w) == len(set(w)) if w else False
     else:
         raise TypeError('Argument should be a string')
-            
+word=input("Please input a word: ")
+
+print(is_isogram(word))
