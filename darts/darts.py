@@ -16,6 +16,6 @@ def score(x, y):
         score =10 
 
     #return function
-    return("your score is " + str(score))
+    return(score)
 
 #print(score(30,2))
