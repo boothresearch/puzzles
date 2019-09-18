@@ -16,6 +16,7 @@ def is_isogram(string):
     # Convert the word or sentence in lower case letters. 
     clean_string = string.lower() 
   
+
     # Make an empty list to append unique letters 
     letter_list = [] 
   
