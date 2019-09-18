@@ -14,7 +14,7 @@ def score(word):
         total = total + score[i];
     return total;
 
-your_word = input("Please input a word: ");
+#your_word = input("Please input a word: ");
 
-print(score(your_word))
+#print(score(your_word))
 
