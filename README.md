@@ -225,3 +225,61 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
 I know this is a lot, but our main focus today is just getting our feet wet with git. Please wave over an instructor as you experiment with these commands and ask questions; remember:
 
 > Questions are places in your mind where answers fit. If you haven’t asked the question, the answer has nowhere to go. — Clay Christensen
+
+## Merging branches
+
+When you're reading to bring the changes from one branch (usually from one of your experimental branches, e.g. `your-name-first-branch`) into another branch (usually into the `master` branch), we have a couple of options:
+
+ 1. Fundamentally, we use Git's `merge` command at the command-line.
+ 1. In the early days, I recommend pushing your branch to GitHub and using GitHub's interface for merging.
+
+### Use GitHub's interface to merge
+
+To merge changes from e.g. `your-name-first-branch` into `master` using GitHub's interface:
+
+ 1. Push your branch to GitHub:
+ 
+    ```
+    git checkout your-name-first-branch
+    git push
+    ```
+    
+ 1. [Create a Pull Request](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+ 1. [Merge the PR](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request). You're given a few strategies to choose from on how to do so; choose [Rebase and merge](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-request-merges#rebase-and-merge-your-pull-request-commits).
+ 1. Switch back to `master` on your machine and fetch the merged version:
+ 
+    ```
+    git checkout master
+    git pull
+    ```
+
+### git merge command
+
+To merge changes from e.g. `your-name-first-branch` into `master` using the command-line:
+
+ 1. First switch to `master` and make sure it is up to date:
+ 
+    ```
+    git checkout master
+    git pull
+    ```
+    
+ 1. Switch back to your feature branch and "rebase interactively" onto `master`. This means, essentially, sync up the feature branch with any changes that may have occurred on `master` since they time you created the branch:
+ 
+    ```
+    git checkout your-name-first-branch
+    git rebase -i
+    ```
+    
+ 1. A text editor will pop up with a list of all of the commits you made along the way on your feature branch. Replace `pick` for all but one of them with `s` (for `squash`). Save and close the file.
+ 1. Another text editor will open where you can craft a wonderful commit, single message to communicate the WHY of your changes (the WHAT is told by the diff).
+ 1. Now that all your messy work-in-progress commits have been ironed out, we can merge:
+ 
+    ```
+    git checkout master
+    git merge your-name-first-branch
+    ```
+ 
+ 1. That's it — verify with `git log`. It's as if you made one, beautiful commit directly to `master`.
+ 
+ 
