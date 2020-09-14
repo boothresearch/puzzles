@@ -1,6 +1,6 @@
 # Puzzles
 
-In order to level up our programming and skills, and having something to do while learning software engineering **workflows**, let's solve some puzzles.
+In order to level up our programming skills, and have something to do while learning software engineering **workflows**, let's solve some puzzles in Python.
 
 In this repository, you'll find twenty-five folders, each containing one puzzle. Each folder contains a `README.md` with a description of the problem, and a `.py` file with a stub of a solution. Your job is to complete the implementation.
 
@@ -36,27 +36,9 @@ Your job, as a team, is to solve as many as possible.
 
 ## Setup
  
- 1. One person from your team should fork (i.e. copy) from `boothresearch/puzzles` to their own account.
- 1. That person should then go to the **Settings** tab at the top of _their fork_, find the **Collaborators** tab on the left side, and then add the other teammates by username.
- 1. Everyone else should receive an invitation via email; accept it.
- 1. Then all of you should clone (i.e. download) from that person's fork to your own machines (in these examples, the command prompt is shown as `$`; yours might look different):
-
-    ```
-    $ git clone git@github.com:[WHOEVER FORKED'S USERNAME]/puzzles.git
-    ```
-
-    If I was on your team, the command would look like:
-
-    ```
-    $ git clone git@github.com:raghubetina/puzzles.git
-    ```
-
- 1. Next, `cd` (**c**hange **d**irectory) into the folder you just downloaded:
-
-    ```
-    $ cd puzzles
-    ```
-
+ 1. You've all been assigned to a team that has write access to this repository.
+ 1. Create a workspace on Gitpod by adding the URL of this repositor
+ 1. Once the workspace has finished setting up, you might want to enable Autosave from the File menu (I always do this).
  1. The first thing you each should do is create your own version, or **branch** to work on. We'll explain more about this later. For now, type the following:
 
     ```
@@ -211,19 +193,20 @@ Git is a very powerful tool with a _lot_ of commands. Here is the small subset o
 
     If you want to start a new branch from this point, though, that's perfectly fine — I do that all the time when I decide I want to try a new approach. Just `git checkout -b new-branch-name` as usual.
 
- 1. When you're ready to send your work back to GitHub.com from your local machine:
+ 1. When you're ready to send the work you've done on a branch back to GitHub.com:
 
     ```
     git push
     ```
 
-    The very first time you `push` to a branch, it may ask you to do something like:
+    - The very first time you `push` to a branch, it may ask you to do something like:
+        
+        ```
+        git push --set-upstream origin your-branch-name
+        ```
+    - The very first time you `push` from Gitpod, it may ask you to give it permission to do so from GitHub. Go ahead and do so. 
 
-    ```
-    git push --set-upstream origin your-branch-name
-    ```
-
- 1. To retrieve the freshest version from GitHub.com, in case there have been any updates:
+ 1. To retrieve the freshest version of the branch you're on from GitHub.com, in case there have been any updates:
 
     ```
     git pull
