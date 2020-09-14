@@ -92,7 +92,7 @@ Your job, as a team, is to solve as many as possible.
  1. Each of you should choose a task to work on. Divide and conquer as you see fit. Before each task, first take a snapshot of the work that you did so far:
 
     ```
-    git commit -A
+    git add -A
     git commit -m "A description of what you did"
     ```
 
