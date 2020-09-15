@@ -1,2 +1,11 @@
 def is_isogram(string):
-    pass
+    string = string.lower()
+    sofar = ""
+    for char in string:
+        if char.isalpha():
+            if char in sofar:
+                return False
+            sofar = sofar + char
+    return True
+            
+            
