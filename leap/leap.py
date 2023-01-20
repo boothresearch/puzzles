@@ -1,2 +1,4 @@
 def leap_year(year):
-    pass
+    return year%400 ==0
+
+# print(leap_year(1999))
