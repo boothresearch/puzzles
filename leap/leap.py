@@ -1,2 +1,5 @@
 def leap_year(year):
-    pass
+    if year % 4 == 0:
+        return True
+    else:
+        return False
